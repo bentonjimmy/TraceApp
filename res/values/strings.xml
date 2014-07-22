@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TraceApp</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="walk">Walk</string>
+    <string name="car">Car</string>
+    <string name="public_transit">Pub.Trans.</string>
+    <string name="startTracking">Start</string>
+    <string name="stopTracking">Stop</string>
+    <string name="resetTrack">Reset</string>
+
+</resources>
