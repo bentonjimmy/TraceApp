@@ -59,7 +59,7 @@ implements GooglePlayServicesClient.ConnectionCallbacks,
 	   super.onResume();
 	   getMap();
 	   getLocationClient();
-	   initializeCamera();
+	   //initializeCamera();
    }
    
    /*
