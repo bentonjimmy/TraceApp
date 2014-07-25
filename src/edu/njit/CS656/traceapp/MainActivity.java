@@ -34,10 +34,14 @@ implements GooglePlayServicesClient.ConnectionCallbacks,
 	private LocationClient myLocationClient;
 	private PolylineOptions lineOptions;
 	private Polyline line;
+	private int lineColor = Color.GREEN;
 	private boolean tracking = false;
 	
 	private final static LocationRequest REQUEST = LocationRequest.create()
 			.setInterval(2000).setFastestInterval(500).setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+	private final static int WALKING = Color.GREEN;
+	private final static int DRIVING = Color.RED;
+	private final static int PUBTRANS = Color.BLUE;
 
 	/*
 	 * This is called when the app is first started.  The initial view is set and the Map is retrieved.
@@ -137,6 +141,10 @@ implements GooglePlayServicesClient.ConnectionCallbacks,
 		   }
 		   
 	   }
+	   else if(myLocationClient.isConnected() == false)
+	   {
+		   myLocationClient.connect();
+	   }
    }
 
 	
@@ -179,7 +187,7 @@ implements GooglePlayServicesClient.ConnectionCallbacks,
 		if(lineOptions == null)
 		{
 			lineOptions = new PolylineOptions().add(new LatLng(latitude, longitude))
-					.color(Color.BLUE).width(35).geodesic(false);
+					.color(lineColor).width(35).geodesic(false);
 			line = theMap.addPolyline(lineOptions);
 		}
 		if(line != null)
@@ -197,6 +205,7 @@ implements GooglePlayServicesClient.ConnectionCallbacks,
 	public void startTracking()
 	{
 		tracking = true;
+		//Start new line here
 	}
 	
 	/*
@@ -206,6 +215,39 @@ implements GooglePlayServicesClient.ConnectionCallbacks,
 	public void stopTracking()
 	{
 		tracking = false;
+	}
+	
+	public void resetTracking()
+	{
+		//Not working properly
+		//tracking = false;
+		lineOptions = null;
+		line = null;
+	}
+	
+	public void setWalking(View view)
+	{
+		if(line != null)
+		{
+			line.setColor(WALKING);
+		}
+	}
+	
+	//Needs to create a new lineOption for each color change
+	public void setDriving(View view)
+	{
+		if(line != null)
+		{
+			line.setColor(DRIVING);
+		}
+	}
+	
+	public void setPubTrans(View view)
+	{
+		if(line != null)
+		{
+			line.setColor(PUBTRANS);
+		}
 	}
 
 	@Override
