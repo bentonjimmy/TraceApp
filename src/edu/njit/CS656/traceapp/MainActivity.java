@@ -16,6 +16,7 @@ import com.google.android.gms.maps.model.PolylineOptions;
 
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBarActivity;
+import android.content.Context;
 import android.graphics.Color;
 import android.location.Location;
 import android.os.Bundle;
@@ -23,6 +24,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity 
@@ -221,33 +223,41 @@ implements GooglePlayServicesClient.ConnectionCallbacks,
 	{
 		//Not working properly
 		//tracking = false;
+		theMap.clear(); //Clear everything on the map
 		lineOptions = null;
+		//line.remove(); //Removes the last line
 		line = null;
 	}
 	
 	public void setWalking(View view)
-	{
-		if(line != null)
-		{
-			line.setColor(WALKING);
-		}
+	{	
+		lineColor = WALKING;
+		lineOptions = null;
+		modeToast("walking");
 	}
 	
-	//Needs to create a new lineOption for each color change
 	public void setDriving(View view)
 	{
-		if(line != null)
-		{
-			line.setColor(DRIVING);
-		}
+		lineColor = DRIVING;
+		lineOptions = null;
+		modeToast("driving");
 	}
 	
 	public void setPubTrans(View view)
 	{
-		if(line != null)
-		{
-			line.setColor(PUBTRANS);
-		}
+		lineColor = PUBTRANS;
+		lineOptions = null;
+		modeToast("on public transportation");
+	}
+	
+	private void modeToast(CharSequence action)
+	{
+		Context context = getApplicationContext();
+		CharSequence text = "You are now "+ action;
+		int duration = Toast.LENGTH_SHORT;
+
+		Toast toast = Toast.makeText(context, text, duration);
+		toast.show();
 	}
 
 	@Override
