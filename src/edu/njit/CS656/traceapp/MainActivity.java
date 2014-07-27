@@ -114,6 +114,9 @@ implements GooglePlayServicesClient.ConnectionCallbacks,
 	   		case R.id.stopTracking:
 	   			stopTracking();
 	   			return true;
+	   		case R.id.resetTrack:
+	   			resetTracking();
+	   			return true;
 	   		default:
 	   			return super.onOptionsItemSelected(item);
 	   }
