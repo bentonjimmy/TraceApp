@@ -1451,13 +1451,16 @@ containing a value of this type.
         public static final int common_signin_btn_text_normal_light=0x7f02006c;
         public static final int common_signin_btn_text_pressed_dark=0x7f02006d;
         public static final int common_signin_btn_text_pressed_light=0x7f02006e;
-        public static final int ic_launcher=0x7f02006f;
-        public static final int ic_plusone_medium_off_client=0x7f020070;
-        public static final int ic_plusone_small_off_client=0x7f020071;
-        public static final int ic_plusone_standard_off_client=0x7f020072;
-        public static final int ic_plusone_tall_off_client=0x7f020073;
-        public static final int powered_by_google_dark=0x7f020074;
-        public static final int powered_by_google_light=0x7f020075;
+        public static final int ic_action_play=0x7f02006f;
+        public static final int ic_action_refresh=0x7f020070;
+        public static final int ic_action_stop=0x7f020071;
+        public static final int ic_launcher=0x7f020072;
+        public static final int ic_plusone_medium_off_client=0x7f020073;
+        public static final int ic_plusone_small_off_client=0x7f020074;
+        public static final int ic_plusone_standard_off_client=0x7f020075;
+        public static final int ic_plusone_tall_off_client=0x7f020076;
+        public static final int powered_by_google_dark=0x7f020077;
+        public static final int powered_by_google_light=0x7f020078;
     }
     public static final class id {
         public static final int action_bar=0x7f08002e;
@@ -1645,7 +1648,7 @@ containing a value of this type.
         /**  Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f06002b;
-        public static final int action_settings=0x7f06002f;
+        public static final int action_settings=0x7f06002e;
         public static final int app_name=0x7f06002d;
         public static final int auth_client_needs_enabling_title=0x7f060001;
         public static final int auth_client_needs_installation_title=0x7f060002;
@@ -1653,7 +1656,7 @@ containing a value of this type.
         public static final int auth_client_play_services_err_notification_msg=0x7f060004;
         public static final int auth_client_requested_by_msg=0x7f060005;
         public static final int auth_client_using_bad_version_title=0x7f060000;
-        public static final int car=0x7f060031;
+        public static final int car=0x7f060030;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
         can enable it [CHAR LIMIT=40] 
@@ -1743,12 +1746,11 @@ containing a value of this type.
         /**  Long form sign-in button text [CHAR LIMIT=30] 
          */
         public static final int common_signin_button_text_long=0x7f06001e;
-        public static final int hello_world=0x7f06002e;
-        public static final int public_transit=0x7f060032;
-        public static final int resetTrack=0x7f060035;
-        public static final int startTracking=0x7f060033;
-        public static final int stopTracking=0x7f060034;
-        public static final int walk=0x7f060030;
+        public static final int public_transit=0x7f060031;
+        public static final int resetTrack=0x7f060034;
+        public static final int startTracking=0x7f060032;
+        public static final int stopTracking=0x7f060033;
+        public static final int walk=0x7f06002f;
         /**  Text on a placeholder buy button when Google Play services is not
          available or up-to-date 
          */

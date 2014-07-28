@@ -3,25 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="edu.njit.CS656.traceapp.MainActivity" >
 
-    <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never"/>
-    <item
-        android:id="@+id/startTracking"
-        android:title="@string/startTracking"
-        android:showAsAction="always"
-        />
-    <item
-        android:id="@+id/stopTracking"
-        android:title="@string/stopTracking"
-        android:showAsAction="always"
-        />
+    <item android:id="@+id/startTracking" android:icon="@drawable/ic_action_play" android:title="@string/startTracking" android:showAsAction="ifRoom" />
+    <item android:id="@+id/stopTracking" android:icon="@drawable/ic_action_stop" android:title="@string/stopTracking" android:showAsAction="ifRoom" />
+    
+    
     <item
         android:id="@+id/resetTrack"
+        android:icon="@drawable/ic_action_refresh"
         android:title="@string/resetTrack"
-        android:showAsAction="always"
+        android:showAsAction="ifRoom"
         />
+    <item android:id="@+id/action_settings" android:orderInCategory="100" android:title="@string/action_settings" app:showAsAction="never" />
 
 </menu>
