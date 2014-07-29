@@ -14,8 +14,8 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
 
-import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBarActivity;
+import android.app.ActionBar;
 import android.content.Context;
 import android.graphics.Color;
 import android.location.Location;
@@ -93,7 +93,7 @@ implements GooglePlayServicesClient.ConnectionCallbacks,
    public boolean onCreateOptionsMenu(Menu menu)
    {
 	   //Inflate the menu; this adds items to the action bar
-	   //This will need Start, Stop, Pause, Reset
+	   //This will need Start, Stop, Reset
 	   MenuInflater inflater = getMenuInflater();
 	   inflater.inflate(R.menu.main, menu);
 	   return super.onCreateOptionsMenu(menu);

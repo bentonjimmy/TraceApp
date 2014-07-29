@@ -1474,7 +1474,7 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f080028;
         public static final int action_menu_presenter=0x7f080029;
         public static final int action_mode_close_button=0x7f080036;
-        public static final int action_settings=0x7f080052;
+        public static final int action_settings=0x7f080055;
         public static final int activity_chooser_view_content=0x7f080037;
         public static final int always=0x7f08001e;
         public static final int beginning=0x7f080023;
@@ -1517,7 +1517,7 @@ containing a value of this type.
         public static final int progress_horizontal=0x7f08002b;
         public static final int pubtrans=0x7f080051;
         public static final int radio=0x7f080041;
-        public static final int resetTrack=0x7f080055;
+        public static final int resetTrack=0x7f080054;
         public static final int sandbox=0x7f080008;
         public static final int satellite=0x7f080002;
         public static final int search_badge=0x7f080044;
@@ -1536,8 +1536,8 @@ containing a value of this type.
         public static final int showHome=0x7f080017;
         public static final int showTitle=0x7f080019;
         public static final int split_action_bar=0x7f080030;
-        public static final int startTracking=0x7f080053;
-        public static final int stopTracking=0x7f080054;
+        public static final int startTracking=0x7f080052;
+        public static final int stopTracking=0x7f080053;
         public static final int strict_sandbox=0x7f080009;
         public static final int submit_area=0x7f08004b;
         public static final int tabMode=0x7f080015;

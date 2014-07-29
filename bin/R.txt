@@ -338,7 +338,7 @@ int id action_context_bar 0x7f08002f
 int id action_menu_divider 0x7f080028
 int id action_menu_presenter 0x7f080029
 int id action_mode_close_button 0x7f080036
-int id action_settings 0x7f080052
+int id action_settings 0x7f080055
 int id activity_chooser_view_content 0x7f080037
 int id always 0x7f08001e
 int id beginning 0x7f080023
@@ -381,7 +381,7 @@ int id progress_circular 0x7f08002a
 int id progress_horizontal 0x7f08002b
 int id pubtrans 0x7f080051
 int id radio 0x7f080041
-int id resetTrack 0x7f080055
+int id resetTrack 0x7f080054
 int id sandbox 0x7f080008
 int id satellite 0x7f080002
 int id search_badge 0x7f080044
@@ -400,8 +400,8 @@ int id showCustom 0x7f08001a
 int id showHome 0x7f080017
 int id showTitle 0x7f080019
 int id split_action_bar 0x7f080030
-int id startTracking 0x7f080053
-int id stopTracking 0x7f080054
+int id startTracking 0x7f080052
+int id stopTracking 0x7f080053
 int id strict_sandbox 0x7f080009
 int id submit_area 0x7f08004b
 int id tabMode 0x7f080015
