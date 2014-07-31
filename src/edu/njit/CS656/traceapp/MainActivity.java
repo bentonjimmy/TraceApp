@@ -122,6 +122,10 @@ implements GooglePlayServicesClient.ConnectionCallbacks,
 	   }
    }
    
+   /*
+   This method initializes the Google Map object by retreiving it from the Support Fragment Manager.
+   The map is then set to allow it to show our location.
+   */
    protected void getMap()
    {
 	   if(theMap == null)
@@ -135,6 +139,10 @@ implements GooglePlayServicesClient.ConnectionCallbacks,
 	   }
    }
    
+   /*
+   Initializes the Location Client.  The location client will provide all location data needed
+   to add the user's location to the map.
+   */
    protected void getLocationClient()
    {
 	   if(myLocationClient == null)
@@ -142,7 +150,7 @@ implements GooglePlayServicesClient.ConnectionCallbacks,
 		   myLocationClient = new LocationClient(getApplicationContext(), this, this);
 		   if(myLocationClient != null)
 		   {
-			   myLocationClient.connect();
+			   myLocationClient.connect(); //start the connection
 		   }
 		   
 	   }
@@ -153,6 +161,9 @@ implements GooglePlayServicesClient.ConnectionCallbacks,
    }
 
 	
+	/*
+	Method that is called whenever the user's location changes.
+	*/
 	@Override
 	public void onLocationChanged(Location location) {
 		updateLocation(location.getLatitude(), location.getLongitude());
@@ -165,7 +176,9 @@ implements GooglePlayServicesClient.ConnectionCallbacks,
 		
 	}
 	
+	/*
 	
+	*/
 	private void updateLocation(double latitude, double longitude)
 	{
 		theMap.moveCamera(CameraUpdateFactory.newCameraPosition(
