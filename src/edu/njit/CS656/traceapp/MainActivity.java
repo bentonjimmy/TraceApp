@@ -177,7 +177,9 @@ implements GooglePlayServicesClient.ConnectionCallbacks,
 	}
 	
 	/*
-	
+	This method controls the actions of what needs to be done with the user's location changes.
+	The camera position is updated and if the user is tracing a route, a point will be added
+	to the line on the map.
 	*/
 	private void updateLocation(double latitude, double longitude)
 	{
@@ -200,18 +202,23 @@ implements GooglePlayServicesClient.ConnectionCallbacks,
 				.zoom(15.5f).bearing(0).tilt(25).build()));
 	}
 	
+	/*
+	This method adds points to the polyline on the map based off of the user's latitude and
+	longitude.  A PolylineOption first needs to be created in order to retreive the Polyline
+	that will be drawn on the map.
+	*/
 	private void addPoint(double latitude, double longitude)
 	{
 		if(lineOptions == null)
 		{
 			lineOptions = new PolylineOptions().add(new LatLng(latitude, longitude))
 					.color(lineColor).width(35).geodesic(false);
-			line = theMap.addPolyline(lineOptions);
+			line = theMap.addPolyline(lineOptions); //add line to map
 		}
 		if(line != null)
 		{
 			List<LatLng> points = line.getPoints();
-			points.add(new LatLng(latitude, longitude));
+			points.add(new LatLng(latitude, longitude)); //add additional points to the line
 			line.setPoints(points);
 		}
 	}
@@ -245,6 +252,10 @@ implements GooglePlayServicesClient.ConnectionCallbacks,
 		line = null;
 	}
 	
+	/*
+	This method responds to the Walk button being pressed.  The line color is changed
+	and lineOptions is set to null in order to create a new line on the map.
+	*/
 	public void setWalking(View view)
 	{	
 		lineColor = WALKING;
@@ -252,6 +263,10 @@ implements GooglePlayServicesClient.ConnectionCallbacks,
 		modeToast("walking");
 	}
 	
+	/*
+	This method responds to the Driving button being pressed.  The line color is changed
+	and lineOptions is set to null in order to create a new line on the map.
+	*/
 	public void setDriving(View view)
 	{
 		lineColor = DRIVING;
@@ -259,6 +274,10 @@ implements GooglePlayServicesClient.ConnectionCallbacks,
 		modeToast("driving");
 	}
 	
+	/*
+	This method responds to the PubTrans button being pressed.  The line color is changed
+	and lineOptions is set to null in order to create a new line on the map.
+	*/
 	public void setPubTrans(View view)
 	{
 		lineColor = PUBTRANS;
@@ -266,6 +285,10 @@ implements GooglePlayServicesClient.ConnectionCallbacks,
 		modeToast("on public transportation");
 	}
 	
+	/*
+	This method handles the toasts that are displayed when the user changes it's mode
+	of transportation.
+	*/
 	private void modeToast(CharSequence action)
 	{
 		Context context = getApplicationContext();
@@ -276,6 +299,10 @@ implements GooglePlayServicesClient.ConnectionCallbacks,
 		toast.show();
 	}
 
+
+	/*
+	The two methods below are needed in order to implement Google Play services interfaces.
+	*/
 	@Override
 	public void onConnectionFailed(ConnectionResult arg0) {
 		// TODO Auto-generated method stub
