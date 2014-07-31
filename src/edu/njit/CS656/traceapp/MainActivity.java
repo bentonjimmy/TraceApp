@@ -99,22 +99,25 @@ implements GooglePlayServicesClient.ConnectionCallbacks,
 	   return super.onCreateOptionsMenu(menu);
    }
    
+   /*
+   This method handles which method should be used when a button in the action bar
+   is pressed.
+   */
    @Override
    public boolean onOptionsItemSelected(MenuItem item)
    {
-	   //Handles actions in the action bar
 	   switch(item.getItemId())
 	   {
 	   		case R.id.action_settings:
 			   //do something
 			   return true;
-	   		case R.id.startTracking:
+	   		case R.id.startTracking: //Start button
 	   			startTracking();
 	   			return true;
-	   		case R.id.stopTracking:
+	   		case R.id.stopTracking: //Stop button
 	   			stopTracking();
 	   			return true;
-	   		case R.id.resetTrack:
+	   		case R.id.resetTrack: //Reset button
 	   			resetTracking();
 	   			return true;
 	   		default:
@@ -170,6 +173,9 @@ implements GooglePlayServicesClient.ConnectionCallbacks,
 		
 	}
 	
+	/*
+	This method sets up the initial location requests from the Location client.
+	*/
 	@Override
 	public void onConnected(Bundle bundle) {
 		myLocationClient.requestLocationUpdates(REQUEST, this);
