@@ -248,10 +248,11 @@ implements GooglePlayServicesClient.ConnectionCallbacks,
 		tracking = false;
 	}
 	
+	/*
+	This method clears the map and all lines drawn on it.
+	*/
 	public void resetTracking()
 	{
-		//Not working properly
-		//tracking = false;
 		theMap.clear(); //Clear everything on the map
 		lineOptions = null;
 		//line.remove(); //Removes the last line
