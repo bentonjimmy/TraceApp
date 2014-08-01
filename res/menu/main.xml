@@ -8,13 +8,13 @@
         android:id="@+id/startTracking" 
         android:icon="@drawable/ic_action_play" 
         android:title="@string/startTracking" 
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="always"/>
     
     <item 
         android:id="@+id/stopTracking" 
         android:icon="@drawable/ic_action_stop" 
         android:title="@string/stopTracking" 
-        app:showAsAction="ifRoom" />
+        app:showAsAction="always" />
     
     
     <item

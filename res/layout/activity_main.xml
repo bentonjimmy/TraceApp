@@ -22,12 +22,12 @@
 
         <Button
             android:id="@+id/walk"
-            android:layout_weight="1"
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="setWalking"
-            android:text="@string/walk" 
-            style="?android:attr/borderlessButtonStyle"/>
+            android:text="@string/walk" />
 
         <Button
             android:id="@+id/car"
